@@ -9,7 +9,8 @@ public class SpringDemoApplication {
 	public static void main(String[] args) {
 		// SpringApplication.run(SpringDemoApplication.class, args);
 
-		var orderService = new OrderService(new PayPalPaymentService());
+		var orderService = new OrderService();
+		// orderService.setPaymentService(new PayPalPaymentService());
 		orderService.placeOrder();
 	}
 
